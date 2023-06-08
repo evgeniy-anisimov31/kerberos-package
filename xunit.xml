@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="./test/tools/reporter/xunit.xsd" ?>
+<testsuites>
+<testsuite package="Unit" id="0" name="defineOperation" timestamp="2023-06-08T06:21:13" hostname="MacBook-Pro-Nedra-New-Def.local" tests="5" failures="0" errors="0" time="0.005">
+	<properties></properties>
+	<testcase name="should validate parameters" classname="defineOperation" time="0.002" start="2023-06-08T06:21:13.678Z" end="2023-06-08T06:21:13.680Z"/>
+	<testcase name="should validate optional parameters, with valid parameters after" classname="defineOperation" time="0.001" start="2023-06-08T06:21:13.680Z" end="2023-06-08T06:21:13.681Z"/>
+	<testcase name="should support defaults" classname="defineOperation" time="0.001" start="2023-06-08T06:21:13.681Z" end="2023-06-08T06:21:13.682Z"/>
+	<testcase name="should return a promise if no callback is provided" classname="defineOperation" time="0.001" start="2023-06-08T06:21:13.682Z" end="2023-06-08T06:21:13.683Z"/>
+	<testcase name="should use a callback if provided" classname="defineOperation" time="0" start="2023-06-08T06:21:13.683Z" end="2023-06-08T06:21:13.683Z"/>
+	<system-out><![CDATA[    ✔ should validate parameters
+    ✔ should validate optional parameters, with valid parameters after
+    ✔ should support defaults
+    ✔ should return a promise if no callback is provided
+    ✔ should use a callback if provided
+
+]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>
+<testsuite package="Unit" id="1" name="module" timestamp="2023-06-08T06:21:13" hostname="MacBook-Pro-Nedra-New-Def.local" tests="4" failures="0" errors="0" time="0.002">
+	<properties></properties>
+	<testcase name="should export version" classname="module" time="0" start="2023-06-08T06:21:13.684Z" end="2023-06-08T06:21:13.684Z"/>
+	<testcase name="should export flags and ids" classname="module" time="0.001" start="2023-06-08T06:21:13.684Z" end="2023-06-08T06:21:13.685Z"/>
+	<testcase name="should export functions" classname="module" time="0" start="2023-06-08T06:21:13.685Z" end="2023-06-08T06:21:13.685Z"/>
+	<testcase name="should export Kerberos" classname="module" time="0.001" start="2023-06-08T06:21:13.685Z" end="2023-06-08T06:21:13.686Z"/>
+	<system-out><![CDATA[    ✔ should export version
+    ✔ should export flags and ids
+    ✔ should export functions
+    ✔ should export Kerberos
+
+]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>
+<testsuite package="Unit" id="2" name="Kerberos" timestamp="2023-06-08T06:21:13" hostname="MacBook-Pro-Nedra-New-Def.local" tests="4" failures="4" errors="0" time="0.512">
+	<properties></properties>
+	<testcase name="should lookup principal details on a server" classname="Kerberos" time="0.01" start="2023-06-08T06:21:13.686Z" end="2023-06-08T06:21:13.696Z">
+		<failure type="AssertionError"><![CDATA[AssertionError: expected Error: Cannot get sequence cursor from ke… to not exist
+    at /Users/evgenii/WebstormProjects/kerberos/test/kerberos_tests.js:24:25]]></failure>
+	</testcase>
+	<testcase name="should check a given password against a kerberos server" classname="Kerberos" time="0.363" start="2023-06-08T06:21:13.696Z" end="2023-06-08T06:21:14.059Z">
+		<failure type="AssertionError"><![CDATA[AssertionError: expected Error: Cannot contact any KDC for request… to not exist
+    at /Users/evgenii/WebstormProjects/kerberos/test/kerberos_tests.js:33:25]]></failure>
+	</testcase>
+	<testcase name="should authenticate against a kerberos server using GSSAPI" classname="Kerberos" time="0.054" start="2023-06-08T06:21:14.059Z" end="2023-06-08T06:21:14.113Z">
+		<failure type="AssertionError"><![CDATA[AssertionError: expected Error:  Miscellaneous failure (see text):… to not exist
+    at /Users/evgenii/WebstormProjects/kerberos/test/kerberos_tests.js:54:29]]></failure>
+	</testcase>
+	<testcase name="should authenticate against a kerberos HTTP endpoint" classname="Kerberos" time="0.085" start="2023-06-08T06:21:14.113Z" end="2023-06-08T06:21:14.198Z">
+		<failure type="AssertionError"><![CDATA[AssertionError: expected Error: getaddrinfo ENOTFOUND astra-test.c… { …(4) } to not exist
+    at Request._callback (test/kerberos_tests.js:83:25)
+    at self.callback (node_modules/request/request.js:185:22)
+    at Request.onRequestError (node_modules/request/request.js:877:8)
+    at Socket.socketErrorListener (_http_client.js:475:9)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21)]]></failure>
+	</testcase>
+	<system-out><![CDATA[    1) should lookup principal details on a server
+    2) should check a given password against a kerberos server
+    3) should authenticate against a kerberos server using GSSAPI
+    4) should authenticate against a kerberos HTTP endpoint
+
+]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>
+<testsuite package="Unit" id="3" name="Kerberos (win32)" timestamp="2023-06-08T06:21:14" hostname="MacBook-Pro-Nedra-New-Def.local" tests="3" failures="0" errors="0" time="0.002">
+	<properties></properties>
+	<testcase name="should create a kerberos client" classname="Kerberos (win32)" time="0.001" start="2023-06-08T06:21:14.199Z" end="2023-06-08T06:21:14.200Z"><skipped/>
+	</testcase>
+	<testcase name="should work from windows" classname="Kerberos (win32)" time="0" start="2023-06-08T06:21:14.200Z" end="2023-06-08T06:21:14.200Z"><skipped/>
+	</testcase>
+	<testcase name="should work from windows using promises" classname="Kerberos (win32)" time="0.001" start="2023-06-08T06:21:14.200Z" end="2023-06-08T06:21:14.201Z"><skipped/>
+	</testcase>
+	<system-out><![CDATA[    - should create a kerberos client
+      ↬ TODO(NODE-4021): Kerberos testing on windows
+    - should work from windows
+      ↬ TODO(NODE-4021): Kerberos testing on windows
+    - should work from windows using promises
+      ↬ TODO(NODE-4021): Kerberos testing on windows
+
+]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>
+</testsuites>
