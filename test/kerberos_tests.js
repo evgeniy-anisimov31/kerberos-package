@@ -9,8 +9,8 @@ chai.use(require('chai-string'));
 // environment variables. Подставлять нужные ENV сюда
 const username = process.env.KERBEROS_USERNAME || 'administrator';
 const password = process.env.KERBEROS_PASSWORD || 'Password01';
-const realm = 'CORP.NEDRA.DIGITAL';
-const hostname = 'astra-test.corp.nedra.digital';
+const realm = process.env.KERBEROS_REALM;
+const hostname = process.env.KERBEROS_HOSTNAME;
 const port = process.env.KERBEROS_PORT || '80';
 
 describe('Kerberos', function () {
